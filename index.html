@@ -87,11 +87,12 @@ https://templatemo.com/tm-559-zay-shop
     
     
     <select id="language-select">
-  <option value="en">Inglés</option>
-  <option value="ru">Ruso</option>
-  <option value="de">Alemán</option>
-  <option value="it">Italiano</option>
-  <option value="pt">Portugués</option>
+  <option value="en">Inglés 🇺🇸</option>
+  <option value="ru">Ruso 🇷🇺</option>
+  <option value="de">Alemán 🇩🇪</option>
+  <option value="it">Italiano 🇮🇹</option>
+  <option value="pt">Portugués 🇵🇹</option>
+  <option value="es">Español 🇪🇸</option>
 </select>
 <button id="translate-button">Traducir</button>
 
@@ -100,7 +101,8 @@ https://templatemo.com/tm-559-zay-shop
   $(document).ready(function () {
     $('#translate-button').click(function () {
       var selectedLanguage = $('#language-select').val();
-      window.location.href = 'https://translate.google.com/translate?hl=en&sl=auto&tl=' + selectedLanguage + '&u=' + encodeURIComponent(window.location.href);
+      // Utiliza el parámetro "disableTranslate" para ocultar la barra de Google Traductor.
+      window.location.href = 'https://translate.google.com/translate?hl=en&sl=auto&tl=' + selectedLanguage + '&u=' + encodeURIComponent(window.location.href) + '&disableTranslate=1';
     });
   });
 </script>
