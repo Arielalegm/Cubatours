@@ -86,7 +86,7 @@ https://templatemo.com/tm-559-zay-shop
     
     
     
-    <select id="language-select">
+<select id="language-select">
   <option value="en">Inglés 🇺🇸</option>
   <option value="ru">Ruso 🇷🇺</option>
   <option value="de">Alemán 🇩🇪</option>
@@ -101,8 +101,10 @@ https://templatemo.com/tm-559-zay-shop
   $(document).ready(function () {
     $('#translate-button').click(function () {
       var selectedLanguage = $('#language-select').val();
-      // Utiliza el parámetro "disableTranslate" para ocultar la barra de Google Traductor.
-      window.location.href = 'https://translate.google.com/translate?hl=en&sl=auto&tl=' + selectedLanguage + '&u=' + encodeURIComponent(window.location.href) + '&disableTranslate=1';
+      // Utiliza el parámetro "sl" para el idioma de origen (auto para detectar automáticamente) y "tl" para el idioma de destino.
+      // Agrega "disableTranslate" al final del enlace para desactivar la barra de traducción de Google.
+      var translateUrl = 'https://translate.google.com/translate?sl=auto&tl=' + selectedLanguage + '&u=' + encodeURIComponent(window.location.href) + '&disableTranslate';
+      window.location.href = translateUrl;
     });
   });
 </script>
