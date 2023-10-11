@@ -83,6 +83,38 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Close Header -->
 
     <!-- Modal -->
+    
+    
+    
+    
+    
+    
+    <button id="translate-button">Traducir</button>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#translate-button').click(function () {
+      // Cambia 'en' al código de idioma al que deseas traducir tu página.
+      // Por ejemplo, 'es' para español.
+      var targetLanguage = 'es';
+
+      // Utiliza el siguiente código para redirigir a la versión traducida de tu página.
+      window.location.href = 'https://translate.google.com/translate?hl=en&sl=auto&tl=' + targetLanguage + '&u=' + encodeURIComponent(window.location.href);
+    });
+  });
+</script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
